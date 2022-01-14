@@ -60,6 +60,40 @@ namespace JalgrattaeksamMVC.Controllers
                 return RedirectToAction(nameof(Teooria));
         }
 
+        // POST: Eksams/TeooriaTulemus
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> VäljastaLuba(int tulemus, int id)
+        {
+
+            var eksam = await _context.Eksam.FindAsync(id);
+            if (eksam == null)
+            {
+                return NotFound();
+            }
+
+
+            try
+            {
+                _context.Update(eksam);
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!EksamExists(eksam.Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return RedirectToAction(nameof(Luba));
+        }
+
 
         // POST: Eksams/Registreeri
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -190,11 +224,19 @@ namespace JalgrattaeksamMVC.Controllers
             return View(await model.ToListAsync());
         }
 
-        // GET: Eksams/Ringrada
-        public async Task<IActionResult> Ringrada()
+        // GET: Eksams/Ring
+        public async Task<IActionResult> Ring()
         {
             var model = _context.Eksam
-                .Where(e => e.Teooria >= 9 && e.Ring == -1);
+                .Where(e => e.Teooria >= 9 && e.Slaalom == 1 && e.Ring == -1);
+            return View(await model.ToListAsync());
+        }
+
+        // GET: Eksams/Tänav
+        public async Task<IActionResult> Tänav()
+        {
+            var model = _context.Eksam
+                .Where(e => e.Ring >= 9 && e.Slaalom == 1 && e.Tänav == -1);
             return View(await model.ToListAsync());
         }
 
@@ -225,13 +267,16 @@ namespace JalgrattaeksamMVC.Controllers
                         break;
                     }
                 default:
-                    return NotFound();
-                    break;
+                    {
+                        return NotFound();
+                        break;
+                    }
+                    
             }
 
             try
             {
-                _context.Update(eksam);
+                _context.Update(tulemus);
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
@@ -247,6 +292,22 @@ namespace JalgrattaeksamMVC.Controllers
             }
 
             return RedirectToAction(osa);
+        }
+
+        // GET: Eksams/Luba
+        public async Task<IActionResult> Luba()
+        {
+            var model = _context.Eksam.Select(e => new LubaViewModel() {
+                Id = e.Id,
+                Eesnimi = e.Eesnimi,
+                Perenimi = e.Perenimi,
+                Teooria = e.Teooria,
+                Ring = e.Ring == -1?".":e.Ring==1?"Õnnestus":"Põrus",
+                Slaalom = e.Slaalom == -1 ? "." : e.Slaalom == 1 ? "Õnnestus" : "Põrus",
+                Tänav = e.Tänav == -1 ? "." : e.Tänav == 1 ? "Õnnestus" : "Põrus",
+                Luba = e.Luba == 1 ? "Väljastatud":e.Tänav == 1? "Väljasta":"."
+            });
+            return View(await model.ToListAsync());
         }
 
         // GET: Eksams/Delete/5

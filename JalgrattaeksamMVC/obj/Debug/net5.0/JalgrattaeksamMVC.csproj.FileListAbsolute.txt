@@ -165,3 +165,7 @@ C:\Users\serge\source\repos\JalgrattaeksamMVC\JalgrattaeksamMVC\obj\Debug\net5.0
 C:\Users\serge\source\repos\JalgrattaeksamMVC\JalgrattaeksamMVC\obj\Debug\net5.0\Razor\Views\Eksams\Registreeri.cshtml.g.cs
 C:\Users\serge\source\repos\JalgrattaeksamMVC\JalgrattaeksamMVC\obj\Debug\net5.0\Razor\Views\Eksams\Teooria.cshtml.g.cs
 C:\Users\serge\source\repos\JalgrattaeksamMVC\JalgrattaeksamMVC\obj\Debug\net5.0\Razor\Views\Eksams\Slaalom.cshtml.g.cs
+C:\Users\serge\source\repos\JalgrattaeksamMVC\JalgrattaeksamMVC\obj\Debug\net5.0\Razor\Views\Eksams\_Osaeksam.cshtml.g.cs
+C:\Users\serge\source\repos\JalgrattaeksamMVC\JalgrattaeksamMVC\obj\Debug\net5.0\Razor\Views\Eksams\Ring.cshtml.g.cs
+C:\Users\serge\source\repos\JalgrattaeksamMVC\JalgrattaeksamMVC\obj\Debug\net5.0\Razor\Views\Eksams\Tänav.cshtml.g.cs
+C:\Users\serge\source\repos\JalgrattaeksamMVC\JalgrattaeksamMVC\obj\Debug\net5.0\Razor\Views\Eksams\Luba.cshtml.g.cs

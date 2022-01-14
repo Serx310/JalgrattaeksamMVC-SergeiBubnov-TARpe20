@@ -21,5 +21,6 @@ namespace JalgrattaeksamMVC.Data
         {
         }
         public DbSet<JalgrattaeksamMVC.Models.Eksam> Eksam { get; set; }
+        public DbSet<JalgrattaeksamMVC.Models.LubaViewModel> LubaViewModel { get; set; }
     }
 }

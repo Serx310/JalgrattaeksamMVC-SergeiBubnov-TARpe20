@@ -60,20 +60,19 @@ namespace JalgrattaeksamMVC.Controllers
                 return RedirectToAction(nameof(Teooria));
         }
 
-        // POST: Eksams/TeooriaTulemus
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> VäljastaLuba(int tulemus, int id)
+        // GET: Eksams/Teooria
+        public async Task<IActionResult> VäljastaLuba(int id)
         {
-
             var eksam = await _context.Eksam.FindAsync(id);
             if (eksam == null)
             {
                 return NotFound();
             }
 
+            if(eksam.Tänav == 1 & eksam.Luba == -1)
+            {
+                eksam.Luba = 1;
+            }
 
             try
             {
@@ -228,7 +227,7 @@ namespace JalgrattaeksamMVC.Controllers
         public async Task<IActionResult> Ring()
         {
             var model = _context.Eksam
-                .Where(e => e.Teooria >= 9 && e.Slaalom == 1 && e.Ring == -1);
+                .Where(e => e.Teooria >= 9 && e.Ring == -1);
             return View(await model.ToListAsync());
         }
 
@@ -236,7 +235,7 @@ namespace JalgrattaeksamMVC.Controllers
         public async Task<IActionResult> Tänav()
         {
             var model = _context.Eksam
-                .Where(e => e.Ring >= 9 && e.Slaalom == 1 && e.Tänav == -1);
+                .Where(e => e.Slaalom == 1 && e.Ring == 1 && e.Tänav == -1);
             return View(await model.ToListAsync());
         }
 
@@ -276,7 +275,7 @@ namespace JalgrattaeksamMVC.Controllers
 
             try
             {
-                _context.Update(tulemus);
+                _context.Update(eksam);
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)

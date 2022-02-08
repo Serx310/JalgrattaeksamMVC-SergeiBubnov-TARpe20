@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HVw2+ICsmcgsrh1b3+0dJzVqynFTof3XaG/DJWmV7TxCUriAZ6A2zRjsdfZ/VT6s+tkuAA88dlTasJNE1bXOKA==",
+  "dgSpecHash": "e/j9UemWjMViX9iAEBZHYpC5Ao8RtdsU8RGCaP3kfjbCiYNeRTK3El0+76ESb3SDkT6kjIerZ0/Wf8edMEXupQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\serge\\source\\repos\\JalgrattaeksamMVC\\JalgrattaeksamMVC\\JalgrattaeksamMVC.csproj",
+  "projectFilePath": "C:\\Users\\serge\\source\\repos\\JalgrattaeksamMVC-SergeiBubnov-TARpe20\\JalgrattaeksamMVC\\JalgrattaeksamMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\serge\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\serge\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.11\\microsoft.aspnetcore.cryptography.internal.5.0.11.nupkg.sha512",

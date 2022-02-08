@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\serge\\source\\repos\\JalgrattaeksamMVC\\JalgrattaeksamMVC\\JalgrattaeksamMVC.csproj": {}
+    "C:\\Users\\serge\\source\\repos\\JalgrattaeksamMVC-SergeiBubnov-TARpe20\\JalgrattaeksamMVC\\JalgrattaeksamMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\serge\\source\\repos\\JalgrattaeksamMVC\\JalgrattaeksamMVC\\JalgrattaeksamMVC.csproj": {
+    "C:\\Users\\serge\\source\\repos\\JalgrattaeksamMVC-SergeiBubnov-TARpe20\\JalgrattaeksamMVC\\JalgrattaeksamMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\serge\\source\\repos\\JalgrattaeksamMVC\\JalgrattaeksamMVC\\JalgrattaeksamMVC.csproj",
+        "projectUniqueName": "C:\\Users\\serge\\source\\repos\\JalgrattaeksamMVC-SergeiBubnov-TARpe20\\JalgrattaeksamMVC\\JalgrattaeksamMVC.csproj",
         "projectName": "JalgrattaeksamMVC",
-        "projectPath": "C:\\Users\\serge\\source\\repos\\JalgrattaeksamMVC\\JalgrattaeksamMVC\\JalgrattaeksamMVC.csproj",
+        "projectPath": "C:\\Users\\serge\\source\\repos\\JalgrattaeksamMVC-SergeiBubnov-TARpe20\\JalgrattaeksamMVC\\JalgrattaeksamMVC.csproj",
         "packagesPath": "C:\\Users\\serge\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\serge\\source\\repos\\JalgrattaeksamMVC\\JalgrattaeksamMVC\\obj\\",
+        "outputPath": "C:\\Users\\serge\\source\\repos\\JalgrattaeksamMVC-SergeiBubnov-TARpe20\\JalgrattaeksamMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\serge\\AppData\\Roaming\\NuGet\\NuGet.Config",
